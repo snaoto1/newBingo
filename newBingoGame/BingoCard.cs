@@ -4,11 +4,11 @@ namespace newBingoGame
 {
     internal class BingoCard
     {
+        private int[] randomNumber = new int[30];           //1列に何種類の数字が入るかを決める
         public int[,] bingoCard()
         {
             ArrayShuffle arrayShuffle = new ArrayShuffle();
-            int[] randomNumber = new int[15];
-            int[,] bingoCard = new int[5, 5];
+            int[,] bingoCard = new int[7, 7];               //〇×〇のビンゴを作るか
             for (int y = 0; y < bingoCard.GetLength(0); y++)
             {
                 for (int x = 0; x < randomNumber.Length; x++)
@@ -22,6 +22,11 @@ namespace newBingoGame
                 }
             }
             return bingoCard;
+        }
+        public int randomNumberLength()
+        {
+            int randomNumberLength = randomNumber.Length;
+            return randomNumberLength;
         }
     }
 }

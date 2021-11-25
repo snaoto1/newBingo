@@ -6,7 +6,10 @@ namespace newBingoGame
         public int[] bingoBall()
         {
             ArrayShuffle arrayshuffle = new ArrayShuffle();
-            int[] bingoBall = new int[75];
+            //bingoCard[,]配列の長さを取得する
+            BingoCard bCard = new BingoCard();
+            int[,] bingoCardLength = bCard.bingoCard();
+            int[] bingoBall = new int[bCard.randomNumberLength() * bingoCardLength.GetLength(0)];
             for (int i = 0; i < bingoBall.Length; i++)
             {
                 bingoBall[i] = i + 1;
