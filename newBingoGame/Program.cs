@@ -30,15 +30,15 @@ namespace newBingoGame
                         bCardFlag = bingoFlag.bingoCardFlag(bCard,bBall[i], bCardFlag);
                         if (x == (bCard.GetLength(0) - 1) / 2 && y == (bCard.GetLength(0) - 1) / 2)
                         {
-                            Console.Write("FREE");
+                            Console.Write(" FREE");
                         }
                         else if (bCardFlag[x, y] == 0)
                         {
-                            Console.Write(bCard[x, y].ToString(" 00 "));
+                            Console.Write(bCard[x, y].ToString(" 000 "));
                         }
                         else if (bCardFlag[x, y] == 1)
                         {
-                            Console.Write(bCard[x, y].ToString("(00)"));
+                            Console.Write(bCard[x, y].ToString("(000)"));
                         }
 
                         if (bCardFlag[x, y] == 1)
