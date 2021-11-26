@@ -9,7 +9,7 @@ namespace newBingoGame
             //bingoCard[,]配列の長さを取得する
             BingoCard bCard = new BingoCard();
             int[,] bingoCardLength = bCard.bingoCard();
-            int[] bingoBall = new int[bCard.randomNumberLength() * bingoCardLength.GetLength(0)];
+            int[] bingoBall = new int[bCard.randomNumber.Length * bingoCardLength.GetLength(0)];
             for (int i = 0; i < bingoBall.Length; i++)
             {
                 bingoBall[i] = i + 1;
